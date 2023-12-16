@@ -2,40 +2,10 @@ package com.example.hairbook.domain.usecase
 
 import com.example.hairbook.domain.entity.Client
 import com.example.hairbook.domain.exception.InvalidClientException
-import com.example.hairbook.domain.repository.ClientRepository
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.Assert.assertEquals
 
-
-class TestRepository : ClientRepository {
-    override suspend fun getClients(): List<Client> {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun getClientById(clientId: Long): Client {
-        return Client(
-            id = 1L,
-            firstName = "Vladislav",
-            lastName = "Bystrov",
-            phoneNumber = "+79112358096",
-            comment = ""
-        )
-    }
-
-    override suspend fun insertClient(client: Client): Client {
-        return client
-    }
-
-    override suspend fun deleteClient(client: Client): Client {
-        return client
-    }
-
-    override suspend fun updateClient(client: Client): Client {
-        return client
-    }
-
-}
 
 class AddClientUseCaseTest {
 
@@ -47,8 +17,8 @@ class AddClientUseCaseTest {
         val client = Client(
             id = 1L,
             firstName = "",
-            lastName = "Bystrov",
-            phoneNumber = "+79112358096",
+            lastName = "Ivanov",
+            phoneNumber = "+79998884444",
             comment = ""
         )
 
@@ -68,9 +38,9 @@ class AddClientUseCaseTest {
 
         val client = Client(
             id = 1L,
-            firstName = "Vladislav",
-            lastName = "Bystrov",
-            phoneNumber = "79112358096",
+            firstName = "Ivan",
+            lastName = "Ivanov",
+            phoneNumber = "79998884444",
             comment = ""
         )
 
@@ -92,7 +62,7 @@ class AddClientUseCaseTest {
             id = 1L,
             firstName = "Vladislav",
             lastName = "Bystrov",
-            phoneNumber = "+79112358096",
+            phoneNumber = "+79998884444",
             comment = ""
         )
 
