@@ -1,6 +1,6 @@
 package com.example.hairbook.domain.usecase
 
-import com.example.hairbook.domain.entity.Client
+import com.example.hairbook.domain.model.Client
 import com.example.hairbook.domain.repository.ClientRepository
 
 class GetClientsUseCase (
